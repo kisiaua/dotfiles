@@ -1,0 +1,5 @@
+echo "Updating arch package database..."
+sudo pacman -Syy
+
+echo "Installing hyprland..."
+sudo pacman -S hyprland

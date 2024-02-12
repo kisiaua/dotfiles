@@ -3,3 +3,6 @@ sudo pacman -Syy
 
 echo "Installing hyprland..."
 sudo pacman -S hyprland
+
+echo "Installing waybar..."
+sudo pacman -S waybar

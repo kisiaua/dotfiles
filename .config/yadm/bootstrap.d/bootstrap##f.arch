@@ -6,3 +6,6 @@ sudo pacman -S hyprland
 
 echo "Installing waybar..."
 sudo pacman -S waybar
+
+echo "Activating numlock on startup"
+sudo sed -i '/^HOOKS=/ s/\"$/ numlock\"/' /etc/mkinitcpio.conf

@@ -7,5 +7,8 @@ sudo pacman -S hyprland
 echo "Installing waybar..."
 sudo pacman -S waybar
 
+echo "Installing rofi-waybar..."
+sudo yay -S rofi-lbonn-wayland-git
+
 echo "Activating numlock on startup"
 sudo sed -i '/^HOOKS=/ s/\"$/ numlock\"/' /etc/mkinitcpio.conf

@@ -12,3 +12,6 @@ sudo yay -S rofi-lbonn-wayland-git
 
 echo "Activating numlock on startup"
 sudo sed -i '/^HOOKS=/ s/\"$/ numlock\"/' /etc/mkinitcpio.conf
+
+echo "Setting cursor theme..."
+sed -i 's/^gtk-cursor-theme-name=.*/gtk-cursor-theme-name=Material/' ~/.config/gtk-3.0/settings.ini

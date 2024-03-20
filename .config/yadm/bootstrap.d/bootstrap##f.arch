@@ -19,3 +19,6 @@ sed -i 's/^gtk-cursor-theme-name=.*/gtk-cursor-theme-name=Material/' ~/.config/g
 
 echo "Initializing of submodules..."
 yadm submodule update --init
+
+ehco "Overwrite local files while cloning"
+yadm checkout "/home/konrad"

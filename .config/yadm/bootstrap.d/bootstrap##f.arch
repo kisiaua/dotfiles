@@ -1,15 +1,15 @@
 echo "Updating arch package database..."
-sudo pacman -Syy
+sudo pacman -Syyu --noconfirm
 
 echo "Installing hyprland..."
-sudo pacman -S hyprland
+sudo pacman -S hyprland --noconfirm
 
 echo "Installing waybar..."
-sudo pacman -S waybar
+sudo pacman -S waybar --noconfirm
 
 echo "Installing rofi-waybar..."
 sudo pacman -Rcns rofi --noconfirm
-yay -S rofi-lbonn-wayland-git
+yay -S rofi-lbonn-wayland-git --noconfirm
 
 echo "Activating numlock on startup"
 sudo sed -i '/^HOOKS=/ s/\"$/ numlock\"/' /etc/mkinitcpio.conf

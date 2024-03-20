@@ -16,3 +16,6 @@ sudo sed -i '/^HOOKS=/ s/\"$/ numlock\"/' /etc/mkinitcpio.conf
 
 echo "Setting cursor theme..."
 sed -i 's/^gtk-cursor-theme-name=.*/gtk-cursor-theme-name=Material/' ~/.config/gtk-3.0/settings.ini
+
+echo "Initializing of submodules..."
+yadm submodule update --init

@@ -1,3 +1,3 @@
 [submodule "scripts/privates"]
 	path = scripts/privates
-	url = https://github.com/kisiaua/scripts-private
+	url = git@github.com:kisiaua/scripts-private.git

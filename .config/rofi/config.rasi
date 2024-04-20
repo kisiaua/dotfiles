@@ -1,12 +1,90 @@
 configuration {
-  timeout {
-      action: "kb-cancel";
-      delay: 15;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method: "name";
-      show-hidden: true;
-      command: "xdg-open"; 
-  }
+	font: "Iosevka 11";
+	dpi: 100;
+}
+
+@theme "/dev/null"
+
+* {
+	bgColor: #2b2b2b;
+	fgColor: #b5b5aa;
+	inputBgColor: #1c1c1c;
+	background-color: transparent;
+    text-color: @fgColor;
+}
+
+window {
+   margin: 20% 32.5%;
+   fullscreen: true;
+    location: center;
+    transparency: "real";
+}
+
+mainbox {
+    border: 2;
+    border-radius: 8;
+    border-color: #BEBEBE;
+    background-color: @bgColor;
+}
+
+prompt { 
+    enabled: false; 
+}
+
+entry {
+	placeholder: "Search";
+	expand: true;
+	padding: 7px 2% 7px 2%;
+	background-color: @inputBgColor;
+    placeholder-color: @fgColor;
+}
+
+inputbar {
+	children: [ prompt, entry ];
+	background-color: @inputBgColor;
+	text-color: @fgColor;
+	expand: false;
+	border-radius: 8px;
+	padding: 8px;
+}
+
+listview {
+	columns: 1;
+	lines: 7;
+	cycle: false;
+    margin: 5px 0 0 0;
+}
+
+mainbox {
+    spacing: 2%;
+    padding: 2% 1% 2% 1%;
+}
+
+element {
+    children: [ element-icon, element-text ];
+    orientation: horizontal;
+	padding: 1.5% 0% 1.5% 0%;
+}
+
+element-icon {
+    size: 1.4em;
+    margin: 0.5% 0.5% 0% 1%;
+}
+
+element-icon selected {
+    background-color: @fgColor;
+}
+
+element-text {
+	expand: true;
+	vertical-align: 0.5;
+	margin: 0.5% 3% 0% 0.5%;
+	background-color: inherit;
+    text-color: inherit;
+}
+
+element selected {
+	background-color: @fgColor;
+	text-color: @bgColor;
+	border-radius: 8px;
 }

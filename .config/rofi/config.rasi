@@ -13,9 +13,10 @@ configuration {
     text-color: @fgColor;
 }
 
+@import "margins.rasi"
+
 window {
-   margin: 20% 32.5%;
-   fullscreen: true;
+    fullscreen: true;
     location: center;
     transparency: "real";
 }

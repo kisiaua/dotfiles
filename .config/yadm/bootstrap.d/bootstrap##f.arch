@@ -4,6 +4,9 @@ sudo pacman -Syyu --noconfirm
 echo "Installing hyprland..."
 sudo pacman -S hyprland --noconfirm
 
+echo "Installing hyprlock..."
+sudo pacman -S hyprlock --noconfirm
+
 echo "Installing waybar..."
 sudo pacman -S waybar --noconfirm
 

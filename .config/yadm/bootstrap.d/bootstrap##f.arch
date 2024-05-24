@@ -32,3 +32,11 @@ echo 'source /usr/share/nvm/init-nvm.sh' >> ~/.zshrc
 source ~/.zshrc
 nvm install node
 
+echo "Log to system without display manager"
+sudo systemctl disable sddm
+sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
+echo -e "[Service]\nExecStart=\nExecStart=-/sbin/agetty --autologin konrad --noclear %I \$TERM" | \
+sudo tee /etc/systemd/system/getty@tty1.service.d/override.conf
+sudo systemctl set-default multi-user.target
+
+

@@ -14,6 +14,9 @@ echo "Installing rofi-waybar..."
 sudo pacman -Rcns rofi --noconfirm
 yay -S rofi-lbonn-wayland-git --noconfirm
 
+echo "Installing hyprpaper..."
+sudo pacman -S hyprpaper --noconfirm
+
 echo "Activating numlock on startup"
 sudo sed -i '/^HOOKS=/ s/\"$/ numlock\"/' /etc/mkinitcpio.conf
 
